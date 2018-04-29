@@ -1,0 +1,35 @@
+<show>:
+    hour: _hour
+    min: _min
+    ans: _ans
+	canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'clock.jpg'
+    Button:
+        text: 'FIND ANGLE'
+        pos: 2*root.right/5, 4*root.top/9
+        size: root.right/5, root.top/9
+        font: 10
+        on_press: root.angle(*args)
+		angle_start: 45
+		angle_end: 45
+    TextInput:
+        id: _hour
+        text: ''
+        pos: root.right/5, 6*root.top/9
+        size: root.right/5, root.top/9
+    TextInput:
+        id: _min
+        text: ''
+        pos: 3*root.right/5, 6*root.top/9
+        size: root.right/5, root.top/9
+    Label:
+        id: _ans
+        pos: 2*root.right/5, 9*root.top/10
+        size: root.right/5, root.top/9
+		color: 0,0,0,1
+		font_size: 30
+
+
